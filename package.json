@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon --watch src",
-    "fib": "node src/fibonacci.js"
+    "fib": "node src/fibonacci.js",
+    "mergeSort": "node src/merge-sort.js"
   },
   "keywords": [],
   "author": "",
