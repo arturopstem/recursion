@@ -51,12 +51,13 @@ function mergeSort(arr) {
   const leftHalf = mergeSort(halves.left);
   const rightHalf = mergeSort(halves.right);
   const merged = mergeHalves(leftHalf, rightHalf);
+  arr.splice(0, arr.length, ...merged);
 
-  return merged;
+  return arr;
 }
 
 const cs50Array = [4, 8, 6, 2, 1, 7, 5, 3];
 console.log('cs50Array:', cs50Array);
 
-const sortedArray = mergeSort(cs50Array);
-console.log(sortedArray);
+mergeSort(cs50Array);
+console.log('Sorted:', cs50Array);
