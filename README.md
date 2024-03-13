@@ -15,3 +15,13 @@ But it does require the path of the js file. Example:
 `npm start src/fibonacci.js`
 
 `npm start src/merge-sort.js`
+
+### Passing command line argument to fibonnaci.js
+
+Examples:
+
+`npm run fib 10`
+
+`npm start src/fibonacci.js 10`
+
+Only the first argument passed after the path is used in the code.
