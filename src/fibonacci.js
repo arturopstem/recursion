@@ -20,15 +20,14 @@ console.log(`fibs(${number}):`);
 console.log(fibs(number));
 
 function fibsRec(n, arr = []) {
-  if (n > 0) {
-    const { length } = arr;
-    if (length <= 1) {
-      arr.push(length);
-    } else {
-      arr.push(arr.at(-1) + arr.at(-2));
-    }
-  } else {
+  if (n <= 0) {
     return arr;
+  }
+  const { length } = arr;
+  if (length <= 1) {
+    arr.push(length);
+  } else {
+    arr.push(arr.at(-1) + arr.at(-2));
   }
   return fibsRec(n - 1, arr);
 }
