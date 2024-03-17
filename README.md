@@ -24,4 +24,4 @@ Examples:
 
 `npm start src/fibonacci.js 10`
 
-Only the first argument passed after the path is used in the code.
+Only the first argument passed in after the path is used in the code.
