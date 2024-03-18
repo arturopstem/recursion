@@ -20,24 +20,24 @@ function splitArray(arr) {
 
 function mergeHalves(left, right) {
   const mergedArr = [];
-  let i = 0;
-  let j = 0;
-  while (i < left.length && j < right.length) {
-    if (left[i] < right[j]) {
-      mergedArr.push(left[i]);
-      i += 1;
+  let leftIndex = 0;
+  let rightIndex = 0;
+  while (leftIndex < left.length && rightIndex < right.length) {
+    if (left[leftIndex] < right[rightIndex]) {
+      mergedArr.push(left[leftIndex]);
+      leftIndex += 1;
     } else {
-      mergedArr.push(right[j]);
-      j += 1;
+      mergedArr.push(right[rightIndex]);
+      rightIndex += 1;
     }
   }
-  while (i < left.length) {
-    mergedArr.push(left[i]);
-    i += 1;
+  while (leftIndex < left.length) {
+    mergedArr.push(left[leftIndex]);
+    leftIndex += 1;
   }
-  while (j < right.length) {
-    mergedArr.push(right[j]);
-    j += 1;
+  while (rightIndex < right.length) {
+    mergedArr.push(right[rightIndex]);
+    rightIndex += 1;
   }
 
   return mergedArr;
