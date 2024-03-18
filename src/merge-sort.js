@@ -61,3 +61,14 @@ console.log('cs50Array:', cs50Array);
 
 mergeSort(cs50Array);
 console.log('Sorted:', cs50Array);
+
+console.log('\nThe Odin Project');
+
+const inputs = [
+  [3, 2, 1, 13, 8, 5, 0, 1],
+  [105, 79, 100, 110],
+];
+console.log('inputs:', inputs);
+
+inputs.forEach(mergeSort);
+console.log('sorted inputs:', inputs);
