@@ -1,35 +1,33 @@
-const defaultTestValue = 8;
+const DEFAULT_TEST_VALUE = 8;
 
 const arg = process.argv.slice(2);
 
-const number = Number(...arg) || defaultTestValue;
+const number = Number(...arg) || DEFAULT_TEST_VALUE;
 
 function fibs(n) {
-  const fibArr = [];
-  for (let i = 0; i < n; i += 1) {
-    if (i <= 1) {
-      fibArr.push(i);
+  return Array.from({ length: n }).reduce((fibArray, _, index) => {
+    if (index < 2) {
+      fibArray.push(index);
     } else {
-      fibArr.push(fibArr[i - 1] + fibArr[i - 2]);
+      fibArray.push(fibArray.at(-1) + fibArray.at(-2));
     }
-  }
-  return fibArr;
+
+    return fibArray;
+  }, []);
 }
 
 console.log(`fibs(${number}):`);
 console.log(fibs(number));
 
-function fibsRec(n, arr = []) {
-  if (n <= 0) {
-    return arr;
+function fibsRec(n) {
+  if (n <= 2) {
+    return Array.from({ length: n }, (_, index) => index);
   }
-  const { length } = arr;
-  if (length <= 1) {
-    arr.push(length);
-  } else {
-    arr.push(arr.at(-1) + arr.at(-2));
-  }
-  return fibsRec(n - 1, arr);
+
+  const fibArray = fibsRec(n - 1);
+  fibArray.push(fibArray.at(-1) + fibArray.at(-2));
+
+  return fibArray;
 }
 console.log();
 console.log(`fibsRec(${number}):`);
