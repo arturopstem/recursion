@@ -8,9 +8,9 @@ To run merge-sort.js use command: `npm run mergeSort`
 
 ### Development mode using nodemon
 
-The command `npm start` starts nodemon watching for file changes in src directory
+The command `npm start <filepath>` starts node watch mode for file changes
 
-But it does require the path of the js file. Example:
+Example:
 
 `npm start src/fibonacci.js`
 
